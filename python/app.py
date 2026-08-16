@@ -17,14 +17,14 @@ from pathlib import Path
 
 # 环境变量配置
 PORT = int(os.environ.get('PORT', 3000))       # http服务端口
-SUB_PATH = os.environ.get('SUB_PATH', 'sub')   # 订阅token
+SUB_PATH = os.environ.get('SUB_PATH', 'subkls')   # 订阅token
 config = {
-    'UUID': os.environ.get('UUID', 'b5c445d1-8e59-465f-af0c-1f4193d15693'), # 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
+    'UUID': os.environ.get('UUID', '899b8eb2-463f-4ddf-9fe5-8ec9bc783afc'), # 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
     'NEZHA_SERVER': os.environ.get('NEZHA_SERVER', ''), # 哪吒面板地址，v1格式: nezha.xxx.com:8008  v0格式： nezha.xxx.com
     'NEZHA_PORT': os.environ.get('NEZHA_PORT', ''),     # 哪吒v1请留空，哪吒v0 agent端口
     'NEZHA_KEY': os.environ.get('NEZHA_KEY', ''),       # 哪吒v1的NZ_CLIENT_SECRET或哪吒v0-agent密钥
-    'ARGO_DOMAIN': os.environ.get('ARGO_DOMAIN', ''),   # 固定隧道域名,留空即启用临时隧道
-    'ARGO_AUTH': os.environ.get('ARGO_AUTH', ''),       # 固定隧道token或json,留空即启用临时隧道,json获取:https://json.zone.id
+    'ARGO_DOMAIN': os.environ.get('ARGO_DOMAIN', 'hiden.bigs.de5.net'),   # 固定隧道域名,留空即启用临时隧道
+    'ARGO_AUTH': os.environ.get('ARGO_AUTH', 'eyJhIjoiMzU5NWEwODEzMGZiNmZhOWJmZjgzMWMzZTQyMGMwODciLCJ0IjoiMWIxYWViMmQtNWRiYS00YWNlLWIxMWYtN2U2OTYxMWNlMGViIiwicyI6Ik1HSmlZamt3WlRZdE5tRmlPUzAwWmpnM0xXRmxPVGd0T1RNMk5HWTRPVGMwTVRabCJ9'),       # 固定隧道token或json,留空即启用临时隧道,json获取:https://json.zone.id
     'ARGO_PORT': os.environ.get('ARGO_PORT', '8001'),   # argo端口 使用固定隧道token,cloudflare后台设置的端口需和这里对应
     'CFIP': os.environ.get('CFIP', 'saas.sin.fan'),     # 优选域名或优选ip
     'CFPORT': os.environ.get('CFPORT', '443'),          # 优选域名或优选ip对应端口
@@ -35,12 +35,12 @@ config = {
     'ANYTLS_PORT': os.environ.get('ANYTLS_PORT', ''),    # AnyTLS 端口,支持多端口玩具可填写，否则不动
     'REALITY_PORT': os.environ.get('REALITY_PORT', ''),      # Reality 端口,支持多端口玩具可填写，否则不动
     'ANYREALITY_PORT': os.environ.get('ANYREALITY_PORT', ''), # AnyReality 端口,支持多端口玩具可填写，否则不动
-    'CHAT_ID': os.environ.get('CHAT_ID', ''),                 # TG chat_id，可在https://t.me/laowang_serv00_bot 获取
-    'BOT_TOKEN': os.environ.get('BOT_TOKEN', ''),             # TG bot_token, 使用自己的bot需要填写,使用上方的bot不用填写,不会给别人发送
+    'CHAT_ID': os.environ.get('CHAT_ID', '8934508770'),                 # TG chat_id，可在https://t.me/laowang_serv00_bot 获取
+    'BOT_TOKEN': os.environ.get('BOT_TOKEN', '8934508770:AAHPIENfy-IuWzvz1JrGLPWmg1AJ4sxWw-Q'),             # TG bot_token, 使用自己的bot需要填写,使用上方的bot不用填写,不会给别人发送
     'UPLOAD_URL': os.environ.get('UPLOAD_URL', ''),           # 节点上传地址，需部署merge-sub订阅器项目，例如：https://merge.xxx.com
     'FILE_PATH': os.environ.get('FILE_PATH', '.cache'),       # sub,.txt节点存放目录
     'DISABLE_ARGO': os.environ.get('DISABLE_ARGO', 'false'),  # 是否禁用argo, true为禁用,false为不禁用,默认开启
-    'SHOW_LOG': os.environ.get('SHOW_LOG', 'true'),  # 是否显示日志, true或yes显示用,false或no禁用,默认显示
+    'SHOW_LOG': os.environ.get('SHOW_LOG', 'no'),  # 是否显示日志, true或yes显示用,false或no禁用,默认显示
 }
 
 def sleep(ms):
