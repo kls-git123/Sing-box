@@ -35,7 +35,7 @@ config = {
     'ANYTLS_PORT': os.environ.get('ANYTLS_PORT', ''),    # AnyTLS 端口,支持多端口玩具可填写，否则不动
     'REALITY_PORT': os.environ.get('REALITY_PORT', ''),      # Reality 端口,支持多端口玩具可填写，否则不动
     'ANYREALITY_PORT': os.environ.get('ANYREALITY_PORT', ''), # AnyReality 端口,支持多端口玩具可填写，否则不动
-    'CHAT_ID': os.environ.get('CHAT_ID', '8934508770'),                 # TG chat_id，可在https://t.me/laowang_serv00_bot 获取
+    'CHAT_ID': os.environ.get('CHAT_ID', '7340271015'),                 # TG chat_id，可在https://t.me/laowang_serv00_bot 获取
     'BOT_TOKEN': os.environ.get('BOT_TOKEN', '8934508770:AAHPIENfy-IuWzvz1JrGLPWmg1AJ4sxWw-Q'),             # TG bot_token, 使用自己的bot需要填写,使用上方的bot不用填写,不会给别人发送
     'UPLOAD_URL': os.environ.get('UPLOAD_URL', ''),           # 节点上传地址，需部署merge-sub订阅器项目，例如：https://merge.xxx.com
     'FILE_PATH': os.environ.get('FILE_PATH', '.cache'),       # sub,.txt节点存放目录
